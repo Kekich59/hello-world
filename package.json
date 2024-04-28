@@ -1,0 +1,11 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Kekich59/hello-world.git",
+  "author": "Kekich59 <art.den59@bk.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.43.1"
+  }
+}
