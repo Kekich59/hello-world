@@ -1,0 +1,16 @@
+name: "yarn install"
+
+before_script:
+  # Install yarn
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  # Make available in the current terminal
+  - export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+  # Dependencies and cache installation
+  - yarn install --cache-folder .yarn
+
+test:
+  stage: test
+  cache:
+    paths:
+    - node_modules/
+    - .yarn
